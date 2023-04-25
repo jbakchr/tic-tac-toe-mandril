@@ -8,6 +8,7 @@ import { Divider } from "../components/common/Divider";
 import { AvatarSelectionSection } from "../components/game/AvatarSelectionSection";
 import { AvatarImage } from "../components/game/AvatarImage";
 import { Arrow } from "../components/common/Arrow";
+import { AvatarImageList } from "../components/game/AvatarImageList";
 
 export const GameSetupPage = () => {
   return (
@@ -22,6 +23,7 @@ export const GameSetupPage = () => {
             <Arrow />
             <AvatarImage avatarImgText="Spiller 2" />
           </AvatarSelectionSection>
+          <AvatarImageList />
         </Container>
       </MainContent>
     </MainLayout>
