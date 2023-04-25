@@ -6,12 +6,13 @@ import { GameSetupHeader } from "../components/game/GameSetupHeader";
 import { Divider } from "../components/common/Divider";
 import { Arrow } from "../components/common/Arrow";
 import { AvatarImage } from "../components/game/AvatarImage";
+import { MainContent } from "../components/layout/MainContent";
 
 export const GameSetupPage = () => {
   return (
     <MainLayout>
       <Navbar />
-      <div style={{ flexGrow: 1 }}>
+      <MainContent>
         <Container maxWidth="xs">
           <GameSetupHeader />
           <Divider />
@@ -27,7 +28,7 @@ export const GameSetupPage = () => {
             <AvatarImage avatarImgText="Spiller 2" />
           </div>
         </Container>
-      </div>
+      </MainContent>
     </MainLayout>
   );
 };
