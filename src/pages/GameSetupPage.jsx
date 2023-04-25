@@ -1,10 +1,11 @@
 import React from "react";
+import { MainLayout } from "../components/MainLayout";
 
 export const GameSetupPage = () => {
   return (
-    <div>
+    <MainLayout>
       <p>navbar</p>
-      <p>game setup</p>
-    </div>
+      <p style={{ flexGrow: 1 }}>game setup</p>
+    </MainLayout>
   );
 };
