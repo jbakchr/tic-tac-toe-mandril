@@ -4,6 +4,7 @@ import { Navbar } from "../components/navbar/Navbar";
 import { GameSetupHeader } from "../components/game/GameSetupHeader";
 import { Divider } from "../components/common/Divider";
 import { Arrow } from "../components/common/Arrow";
+import { AvatarImage } from "../components/game/AvatarImage";
 
 export const GameSetupPage = () => {
   return (
@@ -19,9 +20,9 @@ export const GameSetupPage = () => {
             alignItems: "center",
           }}
         >
-          <p>Player One 1 here</p>
+          <AvatarImage avatarImgText="Spiller 1" />
           <Arrow />
-          <p>Player Two here</p>
+          <AvatarImage avatarImgText="Spiller 2" />
         </div>
       </div>
     </MainLayout>
