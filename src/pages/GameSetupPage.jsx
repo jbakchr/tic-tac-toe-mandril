@@ -13,7 +13,13 @@ export const GameSetupPage = () => {
         <Divider />
         <div style={{ display: "flex" }}>
           <p>Player One 1 here</p>
-          <p>arrow here</p>
+          <picture>
+            <img
+              src={`/images/arrow.webp`}
+              alt="arrow"
+              style={{ width: "50px", height: "50px", transform: "scaleX(-1)" }}
+            />
+          </picture>
           <p>Player Two here</p>
         </div>
       </div>
