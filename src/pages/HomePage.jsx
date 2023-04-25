@@ -10,7 +10,13 @@ export const HomePage = () => {
         backgroundColor: "#0098c7",
       }}
     >
-      <h1 style={{ color: "white", fontStyle: "italic" }}>
+      <h1
+        style={{
+          color: "white",
+          fontStyle: "italic",
+          fontFamily: "Lobster Two",
+        }}
+      >
         Kryds og bol... Mandril!
       </h1>
       <button>Start spillet</button>
