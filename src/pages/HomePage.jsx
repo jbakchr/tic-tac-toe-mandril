@@ -1,13 +1,12 @@
 import { motion } from "framer-motion";
 
+import { MainLayout } from "../components/MainLayout";
+
 export const HomePage = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
+    <MainLayout
+      styles={{
         alignItems: "center",
-        height: "100vh",
         justifyContent: "center",
         backgroundColor: "#0098c7",
       }}
@@ -39,7 +38,7 @@ export const HomePage = () => {
         <motion.button
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 3.0 }}
+          transition={{ delay: 2.0 }}
           style={{
             backgroundColor: "#ffd32a",
             color: "#01a75b",
@@ -54,6 +53,6 @@ export const HomePage = () => {
           Start spillet
         </motion.button>
       </div>
-    </div>
+    </MainLayout>
   );
 };
