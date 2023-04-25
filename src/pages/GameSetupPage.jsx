@@ -7,6 +7,7 @@ import { Divider } from "../components/common/Divider";
 import { Arrow } from "../components/common/Arrow";
 import { AvatarImage } from "../components/game/AvatarImage";
 import { MainContent } from "../components/layout/MainContent";
+import { AvatarSelectionSection } from "../components/game/AvatarSelectionSection";
 
 export const GameSetupPage = () => {
   return (
@@ -16,18 +17,11 @@ export const GameSetupPage = () => {
         <Container maxWidth="xs">
           <GameSetupHeader />
           <Divider />
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              height: "175px",
-            }}
-          >
+          <AvatarSelectionSection>
             <AvatarImage avatarImgText="Spiller 1" />
             <Arrow />
             <AvatarImage avatarImgText="Spiller 2" />
-          </div>
+          </AvatarSelectionSection>
         </Container>
       </MainContent>
     </MainLayout>
