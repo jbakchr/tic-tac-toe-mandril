@@ -1,5 +1,5 @@
 import React from "react";
-import { MainLayout } from "../components/MainLayout";
+import { MainLayout } from "../components/layout/MainLayout";
 import { Navbar } from "../components/navbar/Navbar";
 import { GameSetupHeader } from "../components/game/GameSetupHeader";
 
