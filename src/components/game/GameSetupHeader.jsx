@@ -6,7 +6,7 @@ export const GameSetupHeader = () => {
       style={{
         textAlign: "center",
         marginTop: "20px",
-        marginBottom: "5px",
+        marginBottom: "15px",
         fontFamily: "Lobster Two",
         color: "grey",
         fontSize: "30px",
