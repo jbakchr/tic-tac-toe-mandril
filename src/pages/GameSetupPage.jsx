@@ -1,4 +1,5 @@
-import React from "react";
+import { Container } from "@mui/material";
+
 import { MainLayout } from "../components/layout/MainLayout";
 import { Navbar } from "../components/navbar/Navbar";
 import { GameSetupHeader } from "../components/game/GameSetupHeader";
@@ -11,19 +12,21 @@ export const GameSetupPage = () => {
     <MainLayout>
       <Navbar />
       <div style={{ flexGrow: 1 }}>
-        <GameSetupHeader />
-        <Divider />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <AvatarImage avatarImgText="Spiller 1" />
-          <Arrow />
-          <AvatarImage avatarImgText="Spiller 2" />
-        </div>
+        <Container maxWidth="xs">
+          <GameSetupHeader />
+          <Divider />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <AvatarImage avatarImgText="Spiller 1" />
+            <Arrow />
+            <AvatarImage avatarImgText="Spiller 2" />
+          </div>
+        </Container>
       </div>
     </MainLayout>
   );
