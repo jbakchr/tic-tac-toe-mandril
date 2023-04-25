@@ -21,6 +21,7 @@ export const GameSetupPage = () => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
+              height: "175px",
             }}
           >
             <AvatarImage avatarImgText="Spiller 1" />
