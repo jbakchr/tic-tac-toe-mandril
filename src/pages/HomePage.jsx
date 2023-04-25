@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import { MainLayout } from "../components/MainLayout";
 
@@ -48,14 +49,16 @@ export const HomePage = () => {
         >
           Kryds og bol.. Mandril!
         </motion.h1>
-        <motion.button
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2.0 }}
-          style={btnStyle}
-        >
-          Start spillet
-        </motion.button>
+        <Link to="/game-setup">
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2.0 }}
+            style={btnStyle}
+          >
+            Start spillet
+          </motion.button>
+        </Link>
       </div>
     </MainLayout>
   );
