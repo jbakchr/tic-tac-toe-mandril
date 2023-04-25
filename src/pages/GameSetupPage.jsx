@@ -11,7 +11,13 @@ export const GameSetupPage = () => {
       <div style={{ flexGrow: 1 }}>
         <GameSetupHeader />
         <Divider />
-        <div style={{ display: "flex" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
           <p>Player One 1 here</p>
           <picture>
             <img
