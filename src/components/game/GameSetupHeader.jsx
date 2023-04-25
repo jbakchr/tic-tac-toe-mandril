@@ -5,7 +5,8 @@ export const GameSetupHeader = () => {
     <h2
       style={{
         textAlign: "center",
-        margin: "20px",
+        marginTop: "20px",
+        marginBottom: "5px",
         fontFamily: "Lobster Two",
         color: "grey",
         fontSize: "30px",
