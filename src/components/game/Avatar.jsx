@@ -1,6 +1,10 @@
 import React from "react";
 
-export const Avatar = ({ img }) => {
+export const Avatar = ({ img, index, onAvatarClick }) => {
+  const onImageClick = () => {
+    onAvatarClick(index);
+  };
+
   return (
     <img
       src={`/images/${img.url}`}
@@ -11,6 +15,7 @@ export const Avatar = ({ img }) => {
         borderRadius: "50%",
         margin: "4px",
       }}
+      onClick={onImageClick}
     />
   );
 };

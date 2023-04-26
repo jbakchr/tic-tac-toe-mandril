@@ -9,10 +9,24 @@ const avatars = [
 ];
 
 export const AvatarImageList = () => {
+  const onAvatarClick = (index) => {
+    // When a user clicks an avatar we first extract that avatar from the list of avatars
+    const avatarSelected = avatars.splice(index, 1);
+    console.log("selected avatar", avatarSelected);
+    console.log("remaining avatars:", avatars);
+  };
+
   return (
     <div>
-      {avatars.map((img) => {
-        return <Avatar img={img} />;
+      {avatars.map((img, index) => {
+        return (
+          <Avatar
+            key={index}
+            img={img}
+            index={index}
+            onAvatarClick={onAvatarClick}
+          />
+        );
       })}
     </div>
   );
