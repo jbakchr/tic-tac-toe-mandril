@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import { Container } from "@mui/material";
 
+import { GlobalContext } from "../context/GlobalContext";
 import { MainLayout } from "../components/layout/MainLayout";
 import { Navbar } from "../components/navbar/Navbar";
 import { MainContent } from "../components/layout/MainContent";
@@ -13,6 +15,16 @@ import { GameSetupSubHeader } from "../components/game/GameSetupSubHeader";
 import { AvatarImageList } from "../components/game/AvatarImageList";
 
 export const GameSetupPage = () => {
+  const { players } = useContext(GlobalContext);
+
+  const renderArrow = () => {
+    if (players.length === 2) {
+      return;
+    }
+
+    return <Arrow />;
+  };
+
   return (
     <MainLayout>
       <Navbar />
@@ -22,7 +34,7 @@ export const GameSetupPage = () => {
           <Divider />
           <AvatarSelectionSection>
             <AvatarImage avatarImgText="Spiller 1" />
-            <Arrow />
+            {renderArrow()}
             <AvatarImage avatarImgText="Spiller 2" />
           </AvatarSelectionSection>
           <AvatarImageListSection>
