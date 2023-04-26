@@ -1,4 +1,5 @@
 import { AvatarImage } from "./AvatarImage";
+import { ImagePlaceholder } from "./ImagePlaceholder";
 
 const imgStyle = {
   border: "1px solid black",
@@ -12,16 +13,5 @@ export const AvatarImagePlaceholder = ({ avatarImgText, player }) => {
     return <AvatarImage player={player} styles={imgStyle} />;
   }
 
-  return (
-    <div
-      style={{
-        ...imgStyle,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <p>{avatarImgText}</p>
-    </div>
-  );
+  return <ImagePlaceholder imgStyle={imgStyle} avatarImgText={avatarImgText} />;
 };
