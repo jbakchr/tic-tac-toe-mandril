@@ -1,12 +1,15 @@
-import React from "react";
 import { GameSetupSubHeader } from "./GameSetupSubHeader";
 import { Avatar } from "./Avatar";
+
+const avatars = [{ url: "bianca_landsvig.png", altText: "Bianca Landsvig" }];
 
 export const AvatarImageList = () => {
   return (
     <div>
       <GameSetupSubHeader />
-      <Avatar />
+      {avatars.map((img) => {
+        return <Avatar img={img} />;
+      })}
     </div>
   );
 };
