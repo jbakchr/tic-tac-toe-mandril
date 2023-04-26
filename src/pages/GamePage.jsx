@@ -3,6 +3,7 @@ import { MainLayout } from "../components/layout/MainLayout";
 import { Navbar } from "../components/navbar/Navbar";
 import { MainContent } from "../components/layout/MainContent";
 import { Container } from "@mui/material";
+import { GameBoard } from "../components/game/GameBoard";
 
 export const GamePage = () => {
   return (
@@ -10,7 +11,7 @@ export const GamePage = () => {
       <Navbar />
       <MainContent>
         <Container maxWidth="xs">
-          <p>Game board here</p>
+          <GameBoard />
           <p>A header such "Hvis tur er det .. ?" here</p>
           <p>New game button here</p>
         </Container>
