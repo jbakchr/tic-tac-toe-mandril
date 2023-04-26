@@ -10,6 +10,7 @@ import { AvatarImage } from "../components/game/AvatarImage";
 import { Arrow } from "../components/common/Arrow";
 import { AvatarImageListSection } from "../components/game/AvatarImageListSection";
 import { GameSetupSubHeader } from "../components/game/GameSetupSubHeader";
+import { AvatarImageList } from "../components/game/AvatarImageList";
 
 export const GameSetupPage = () => {
   return (
@@ -26,7 +27,7 @@ export const GameSetupPage = () => {
           </AvatarSelectionSection>
           <AvatarImageListSection>
             <GameSetupSubHeader />
-            <p>image list</p>
+            <AvatarImageList />
           </AvatarImageListSection>
         </Container>
       </MainContent>
