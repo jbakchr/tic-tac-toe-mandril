@@ -11,10 +11,31 @@ export const AvatarImageList = () => {
   ]);
 
   const onAvatarClick = (index) => {
-    // When a user clicks an avatar we first extract that avatar from the list of avatars
-    const avatarSelected = avatars.splice(index, 1);
-    console.log("selected avatar", avatarSelected);
-    console.log("remaining avatars:", avatars);
+    /**
+     * TODO: Write comment about this check
+     */
+    if (avatars.length <= 3) {
+      return;
+    }
+
+    /**
+     * When the user clicks and avatar we first make a copy of the avatars array
+     * as this will make it easier to set the avatars state when the clicked
+     * avatar has been spliced
+     */
+    const avatarsCopy = [...avatars];
+
+    /**
+     * Then we splice the avatars array copy in order to get the element (avatar)
+     * that'll be used to set as one of the players in the global state
+     */
+    const selectedAvatar = avatarsCopy.splice(index, 1);
+
+    /**
+     * Lastly we update the avatars state with the new spliced list of avatars and
+     * then push the selected avatar onto global state
+     */
+    setAvatars(avatarsCopy);
   };
 
   return (
