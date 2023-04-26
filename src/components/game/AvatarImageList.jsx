@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+
+import { GlobalContext } from "../../context/GlobalContext";
 import { Avatar } from "./Avatar";
 
 export const AvatarImageList = () => {
@@ -9,6 +11,7 @@ export const AvatarImageList = () => {
     { url: "kenneth.png", altText: "Kenneth" },
     { url: "laughing_eagle.png", altText: "Laughing Eagle" },
   ]);
+  const { addPlayer } = useContext(GlobalContext);
 
   const onAvatarClick = (index) => {
     /**
@@ -29,13 +32,14 @@ export const AvatarImageList = () => {
      * Then we splice the avatars array copy in order to get the element (avatar)
      * that'll be used to set as one of the players in the global state
      */
-    const selectedAvatar = avatarsCopy.splice(index, 1);
+    const selectedAvatar = avatarsCopy.splice(index, 1)[0];
 
     /**
      * Lastly we update the avatars state with the new spliced list of avatars and
      * then push the selected avatar onto global state
      */
     setAvatars(avatarsCopy);
+    addPlayer(selectedAvatar);
   };
 
   return (
