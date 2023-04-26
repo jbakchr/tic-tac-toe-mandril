@@ -46,9 +46,15 @@ export const GameSetupPage = () => {
           <GameSetupHeader />
           <Divider />
           <AvatarSelectionSection>
-            <AvatarImagePlaceholder avatarImgText="Spiller 1" />
+            <AvatarImagePlaceholder
+              avatarImgText="Spiller 1"
+              player={players[0]}
+            />
             {renderArrow()}
-            <AvatarImagePlaceholder avatarImgText="Spiller 2" />
+            <AvatarImagePlaceholder
+              avatarImgText="Spiller 2"
+              player={players[1]}
+            />
           </AvatarSelectionSection>
           <AvatarImageListSection>
             <GameSetupSubHeader />

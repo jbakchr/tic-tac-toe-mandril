@@ -1,6 +1,7 @@
 import React from "react";
 
-export const AvatarImagePlaceholder = ({ avatarImgText }) => {
+export const AvatarImagePlaceholder = ({ avatarImgText, player }) => {
+  console.log(player);
   return (
     <div
       style={{
