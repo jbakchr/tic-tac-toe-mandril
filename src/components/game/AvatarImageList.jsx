@@ -22,7 +22,7 @@ export const AvatarImageList = () => {
     }
 
     /**
-     * When the user clicks and avatar we first make a copy of the avatars array
+     * When the user clicks an avatar we first make a copy of the avatars array
      * as this will make it easier to set the avatars state when the clicked
      * avatar has been spliced
      */
