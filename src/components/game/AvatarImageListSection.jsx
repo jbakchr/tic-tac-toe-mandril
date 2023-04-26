@@ -3,13 +3,12 @@ import { Avatar } from "./Avatar";
 
 const avatars = [{ url: "bianca_landsvig.png", altText: "Bianca Landsvig" }];
 
-export const AvatarImageList = () => {
+export const AvatarImageListSection = ({ children }) => {
   return (
-    <div>
-      <GameSetupSubHeader />
-      {avatars.map((img, index) => {
-        return <Avatar key={index} img={img} />;
-      })}
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
+      {children}
     </div>
   );
 };
