@@ -7,8 +7,8 @@ export const AvatarImageList = () => {
   return (
     <div>
       <GameSetupSubHeader />
-      {avatars.map((img) => {
-        return <Avatar img={img} />;
+      {avatars.map((img, index) => {
+        return <Avatar key={index} img={img} />;
       })}
     </div>
   );
