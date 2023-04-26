@@ -39,7 +39,11 @@ export const HomePage = () => {
         >
           Kryds og bol.. Mandril!
         </motion.h1>
-        <GameStartButton to="/game-setup" buttonText="Start spillet" />
+        <GameStartButton
+          to="/game-setup"
+          timeDelay={2.0}
+          buttonText="Start spillet"
+        />
       </div>
     </MainLayout>
   );

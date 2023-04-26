@@ -33,7 +33,7 @@ export const GameSetupPage = () => {
 
     return (
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <GameStartButton buttonText="Start" />
+        <GameStartButton to="/game" timeDelay={0.5} buttonText="Start" />
       </div>
     );
   };

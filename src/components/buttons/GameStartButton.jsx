@@ -12,13 +12,13 @@ const btnStyle = {
   fontWeight: "bolder",
 };
 
-export const GameStartButton = ({ to, buttonText }) => {
+export const GameStartButton = ({ to, timeDelay, buttonText }) => {
   return (
     <Link to={to}>
       <motion.button
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2.0 }}
+        transition={{ delay: timeDelay }}
         style={btnStyle}
       >
         {buttonText}
