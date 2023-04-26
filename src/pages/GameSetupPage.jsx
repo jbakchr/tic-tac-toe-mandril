@@ -13,6 +13,7 @@ import { Arrow } from "../components/common/Arrow";
 import { AvatarImageListSection } from "../components/game/AvatarImageListSection";
 import { GameSetupSubHeader } from "../components/game/GameSetupSubHeader";
 import { AvatarImageList } from "../components/game/AvatarImageList";
+import { GameStartButton } from "../components/buttons/GameStartButton";
 
 export const GameSetupPage = () => {
   const { players } = useContext(GlobalContext);
@@ -23,6 +24,18 @@ export const GameSetupPage = () => {
     }
 
     return <Arrow />;
+  };
+
+  const renderGameStartButton = () => {
+    if (players.length !== 2) {
+      return null;
+    }
+
+    return (
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <GameStartButton buttonText="Start" />
+      </div>
+    );
   };
 
   return (
@@ -41,6 +54,7 @@ export const GameSetupPage = () => {
             <GameSetupSubHeader />
             <AvatarImageList />
           </AvatarImageListSection>
+          {renderGameStartButton()}
         </Container>
       </MainContent>
     </MainLayout>
