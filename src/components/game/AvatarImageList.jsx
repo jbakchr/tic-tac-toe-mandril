@@ -1,5 +1,10 @@
 import React from "react";
+import { GameSetupSubHeader } from "./GameSetupSubHeader";
 
 export const AvatarImageList = () => {
-  return <div>AvatarImageList</div>;
+  return (
+    <div>
+      <GameSetupSubHeader />
+    </div>
+  );
 };
