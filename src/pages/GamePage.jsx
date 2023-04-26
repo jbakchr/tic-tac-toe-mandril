@@ -10,7 +10,9 @@ export const GamePage = () => {
       <Navbar />
       <MainContent>
         <Container maxWidth="xs">
-          <p>content here</p>
+          <p>Game board here</p>
+          <p>A header such "Hvis tur er det .. ?" here</p>
+          <p>New game button here</p>
         </Container>
       </MainContent>
     </MainLayout>
