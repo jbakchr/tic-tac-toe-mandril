@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import { MainLayout } from "../components/layout/MainLayout";
+import { GameStartButton } from "../components/buttons/GameStartButton";
 
 const mainStyle = {
   alignItems: "center",
@@ -26,17 +27,6 @@ const headerStyle = {
   textAlign: "center",
 };
 
-const btnStyle = {
-  backgroundColor: "#ffd32a",
-  color: "#01a75b",
-  fontFamily: "Lobster Two",
-  padding: "10px 50px",
-  borderRadius: "50%",
-  fontSize: "20px",
-  boxShadow: "3px 3px black",
-  fontWeight: "bolder",
-};
-
 export const HomePage = () => {
   return (
     <MainLayout styles={mainStyle}>
@@ -49,16 +39,7 @@ export const HomePage = () => {
         >
           Kryds og bol.. Mandril!
         </motion.h1>
-        <Link to="/game-setup">
-          <motion.button
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2.0 }}
-            style={btnStyle}
-          >
-            Start spillet
-          </motion.button>
-        </Link>
+        <GameStartButton to="/game-setup" buttonText="Start spillet" />
       </div>
     </MainLayout>
   );
